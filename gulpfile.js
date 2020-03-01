@@ -16,8 +16,8 @@ const twig = require("gulp-twig");
 const cache = require("gulp-cache");
 // const htmlmin = require("gulp-htmlmin");
 
-// path
-const path = {
+// paths
+const paths = {
   root: {
     css: "scss/",
     js: "js/",
@@ -49,7 +49,7 @@ function browserSyncReload(done) {
 // css
 function css() {
   return gulp
-    .src(path.root.css + "style.scss")
+    .src(paths.root.css + "style.scss")
     .pipe(sourcemaps.init()) // initialize sourcemaps first
     .pipe(sass()) // compile SCSS to CSS
     .pipe(plumber(function(error) {}))
@@ -60,14 +60,14 @@ function css() {
       })
     )
     .pipe(sourcemaps.write("./")) // write sourcemaps file in current directory
-    .pipe(gulp.dest(path.root.appCss)) // put final CSS in  folder
+    .pipe(gulp.dest(paths.root.appCss)) // put final CSS in  folder
     .pipe(browsersync.stream());
 }
 
 // Entry JS
 function js() {
   return gulp
-    .src([path.root.js + "entry.js"])
+    .src([paths.root.js + "entry.js"])
     .pipe(sourcemaps.init()) // initialize sourcemaps first
     .pipe(concat("index.js"))
     .pipe(plumber(function(error) {}))
@@ -78,14 +78,14 @@ function js() {
       })
     )
     .pipe(sourcemaps.write("./")) // write sourcemaps file in current directory
-    .pipe(gulp.dest(path.root.appJs)) // put final js in folder
+    .pipe(gulp.dest(paths.root.appJs)) // put final js in folder
     .pipe(browsersync.stream());
 }
 
 // html templating
 function twigHtml() {
   return gulp
-    .src(path.root.template + "pages/**/*.twig")
+    .src(paths.root.template + "pages/**/*.twig")
     .pipe(twig())
     .pipe(gulp.dest("./app"))
     .pipe(browsersync.stream());
@@ -94,7 +94,7 @@ function twigBuild() {
   gulp.task(
     "reloadHtml",
     gulp.series([twigHtml], function() {
-      gulp.watch(paths.root.templatePages + "**/*.twig", browserSync.reload);
+      gulp.watch(pathss.root.templatePages + "**/*.twig", browserSync.reload);
       gulp.watch("**/*.html", browserSync.reload);
     })
   );
@@ -102,17 +102,17 @@ function twigBuild() {
 
 // Watch files
 function watchFiles() {
-  gulp.watch([path.root.css + "**/*"], css);
-  gulp.watch([path.root.js + "**/*"], gulp.series(js));
-  gulp.watch([path.root.template + "**/*"], gulp.series(twigHtml));
+  gulp.watch([paths.root.css + "**/*"], css);
+  gulp.watch([paths.root.js + "**/*"], gulp.series(js));
+  gulp.watch([paths.root.template + "**/*"], gulp.series(twigHtml));
   gulp.watch(
     [
       "**/*.html",
-      path.root.template + "**/*.twig",
-      path.root.css + "**/*.sass",
-      path.root.css + "**/*.scss",
-      path.root.css + "**/*.css",
-      path.root.js + "**/*.js"
+      paths.root.template + "**/*.twig",
+      paths.root.css + "**/*.sass",
+      paths.root.css + "**/*.scss",
+      paths.root.css + "**/*.css",
+      paths.root.js + "**/*.js"
     ],
     gulp.series(browserSyncReload)
   );
