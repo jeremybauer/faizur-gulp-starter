@@ -9,7 +9,6 @@ const cssnano = require("cssnano");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const rename = require("gulp-rename");
-const del = require("del");
 // const replace = require("gulp-replace");
 const plumber = require("gulp-plumber");
 const twig = require("gulp-twig");
