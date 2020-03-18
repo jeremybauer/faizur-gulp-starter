@@ -13,17 +13,19 @@ const rename = require("gulp-rename");
 const plumber = require("gulp-plumber");
 const twig = require("gulp-twig");
 const cache = require("gulp-cache");
-// const htmlmin = require("gulp-htmlmin");
+const prettyHtml = require("gulp-pretty-html");
 
 // paths
 const paths = {
   root: {
-    css: "scss/",
+    css: "css/",
     js: "js/",
     template: "templates/",
-    appCss: "app/css/",
-    appJs: "app/js/",
-    bootstrap: "node_modules/bootstrap"
+    distCss: "dist/css/",
+    distJs: "dist/js/"
+  },
+  lib: {
+    jquery: "node_modules/jquery/dist/jquery.js"
   }
 };
 
@@ -31,7 +33,7 @@ const paths = {
 function browserSync(done) {
   browsersync.init({
     server: {
-      baseDir: "./app",
+      baseDir: "./dist",
       proxy: "localhost:3001"
     },
     notify: false
@@ -59,14 +61,18 @@ function css() {
       })
     )
     .pipe(sourcemaps.write("./")) // write sourcemaps file in current directory
-    .pipe(gulp.dest(paths.root.appCss)) // put final CSS in  folder
+    .pipe(gulp.dest(paths.root.distCss)) // put final CSS in  folder
     .pipe(browsersync.stream());
 }
 
 // Entry JS
 function js() {
   return gulp
-    .src([paths.root.js + "entry.js"])
+    .src([
+      // If you want you can remove jquery
+      paths.lib.jquery,
+      paths.root.js + "entry.js"
+    ])
     .pipe(sourcemaps.init()) // initialize sourcemaps first
     .pipe(concat("index.js"))
     .pipe(plumber(function(error) {}))
@@ -77,7 +83,7 @@ function js() {
       })
     )
     .pipe(sourcemaps.write("./")) // write sourcemaps file in current directory
-    .pipe(gulp.dest(paths.root.appJs)) // put final js in folder
+    .pipe(gulp.dest(paths.root.distJs)) // put final js in folder
     .pipe(browsersync.stream());
 }
 
@@ -86,9 +92,12 @@ function twigHtml() {
   return gulp
     .src(paths.root.template + "pages/**/*.twig")
     .pipe(twig())
-    .pipe(gulp.dest("./app"))
+    .pipe(prettyHtml()) // prettyHtml function added for make pretty html after compiling
+    .pipe(gulp.dest("./dist"))
     .pipe(browsersync.stream());
 }
+// twigBuild function is very important for compiling all twig files included components, pages, layouts,
+// If you will delete this function then only pages will be compile not othe folders
 function twigBuild() {
   gulp.task(
     "reloadHtml",

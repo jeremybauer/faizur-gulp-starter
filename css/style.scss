@@ -9,26 +9,28 @@ ITCSS Auther:     Harry Roberts.
 -------------------------------------------------------------------*/
 
 // Settings
-@import "scss/00-settings/settings.global.scss";
+@import "css/00-settings/settings.global.scss";
 @import "node_modules/bootstrap/scss/bootstrap";
 
 // Tools
-@import "scss/01-tools/tools.mixins";
+@import "css/01-tools/tools.mixins";
 
 // Generic
-@import "scss/02-generic/generic.reset";
+@import "css/02-generic/generic.reset";
 
 // Elements
-@import "scss/03-elements/elements.heading";
+@import "css/03-elements/elements.heading";
 
 // Objects
-@import "scss/04-objects/objects.overlays";
+@import "css/04-objects/objects.overlays";
 
 // Components
-@import "scss/05-components/components.header";
+@import "css/05-components/components.header";
+@import "css/05-components/components.footer";
+@import "css/05-components/components.profile"; // remove this
 
 // Utilities
-@import "scss/06-utilities/utilities.clearfix";
+@import "css/06-utilities/utilities.clearfix";
 
 // layouts
-@import "scss/07-layouts/layout.homepage";
+@import "css/07-layouts/layout.homepage";

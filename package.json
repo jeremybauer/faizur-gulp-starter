@@ -10,7 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
-    "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
@@ -23,6 +22,7 @@
     "gulp-livereload": "^4.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
+    "gulp-pretty-html": "^2.0.10",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
@@ -33,5 +33,8 @@
     "gulp-twig": "^1.2.0",
     "gulp-uglify-es": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
+  }
 }

@@ -14,7 +14,8 @@
   </main>
   <!-- Footer -->
   {% include "../components/footer.twig" %}
-  <!-- {{ block('included_content') }} -->
-</body>
 
+  <!-- This is very important tag if you wanna use differnt JS after footer in all html check the example in: pages/index.twig -->
+  {{ block('included_content') }}
+</body>
 </html>
