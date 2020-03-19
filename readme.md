@@ -62,4 +62,5 @@ Want to contribute? Great! Email Me [me@faizur.com](mailto:me@faizur.com)
 **Free Software, Hell Yeah!**
 
 Wanna know more [Faizur Rehman](https://faizur.com/)
+
 Dont forget to follow me on [Instagram](https://www.instagram.com/fazurrehman/)
