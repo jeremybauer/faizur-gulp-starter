@@ -11,23 +11,35 @@
 </head>
 
 <body>
-    <header>
-        <strong>Hello Everyone!</strong>
+    <header class="container">
+        <div class="brand">
+            <img class="logo" src="https://faizur.com/assets/logo.svg" alt="" onclick="javascript:location.href='http://faizur.com/'">
+            <label>Starter</label>
+        </div>
+        <div class="actions">
+            <a href="https://github.com/fazurrehman/faizur-gulp-starter">
+                Github
+            </a>
+        </div>
     </header>
     <main>
         <!-- MAIN -->
 
         <!-- Demo Content -->
         <main>
-            <div class="welcome">
-                <img src="https://avatars2.githubusercontent.com/u/6688472?s=460&u=6e40d7d4e12b1f4fe0cfbeba15165867b61bea45&v=4" alt="">
-                <h1>Hello, Welcome to <br>Faizur Gulp Starter</h1>
-                    <p>By <a href="https://www.instagram.com/fazurrehman/">Faizur Rehman</a></p>
+            <div class="welcome container">
+                <p>Faizur Gulp Starter is one of best frontend project structure, designed for personal & client projects, This project
+                    structure created based on NodeJS & gulp to make everything automate including HTML, SASS/Postcss, Twig Templating
+                    Engine, JS, Minify and more...</p>
             </div>
         </main>
     </main>
     <!-- Footer -->
-    <footer>Download Template from <a href="https://github.com/fazurrehman/faizur-gulp-starter"><strong>Github</strong> </a></footer>
+    <footer>
+        <div class="container">
+            Download Template from <a href="https://github.com/fazurrehman/faizur-gulp-starter"><strong>Github</strong> </a>
+        </div>
+    </footer>
     <!-- This is very important tag if you wanna use differnt JS after footer in all html check the example in: pages/index.twig -->
     <script src="js/index.min.js"></script>
 

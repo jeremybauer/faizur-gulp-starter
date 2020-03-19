@@ -1,0 +1,29 @@
+// reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+body
+  height: 100%
+  overflow-X: hidden
+  position: relative
+
+*
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-tap-highlight-color: transparent
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004)
+
+*,
+*:hover,
+*:active,
+*:focus
+  outline: none!important
+a
+  display: inline-block
+  transition: 120ms ease-in
+  
+a:hover,
+a:active,
+a:focus
+  text-decoration: none
+
+i
+  font-style: normal

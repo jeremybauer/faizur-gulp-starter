@@ -1,3 +1,33 @@
 header
-  text-align: center
   padding: 40px 0
+  display: flex
+  justify-content: space-between
+
+.brand
+  display: flex
+  align-items: baseline
+  label
+    margin-bottom: 0
+    font-size: 1.8rem
+    margin-left: 4px
+    font-weight: bold
+    opacity: 0.4
+  
+.logo
+  filter: invert(1)
+  width: 100px
+  cursor: pointer
+
+.actions
+  a
+    position: relative
+    padding-left: 32px
+    &:before
+      content: ''
+      width: 28px
+      height: 28px
+      background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') center center no-repeat
+      position: absolute
+      left: 0
+      top: -2px
+      background-size: cover
