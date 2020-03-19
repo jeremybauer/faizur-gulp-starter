@@ -12,6 +12,11 @@ This is my one of best frontend project structure, designed for personal & clien
 | **PostCSS** | npmjs.com/package/gulp-twig                                                                 |
 | See More    | [package.json](https://github.com/fazurrehman/faizur-gulp-starter/blob/master/package.json) |
 
+## Framework & libraries
+
+- Bootstrap sass
+- Jquery
+
 ### Installation
 
 Gulp Starter requires [Node.js](https://nodejs.org/) to run.
