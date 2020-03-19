@@ -1,3 +1,5 @@
+[logo]: https://github.com/fazurrehman/faizur-gulp-starter/tree/master/dist/img "faizur-gulp-starter"
+
 # Faizur Gulp Starter
 
 This is my one of best frontend project structure, designed for personal & client projects and This project structure created based on gulp to make everything automate including HTML, sass, templating engine, js, minify and more...
