@@ -1,4 +1,4 @@
-[logo]: https://github.com/fazurrehman/faizur-gulp-starter/tree/master/dist/img "faizur-gulp-starter"
+[logo]: https://github.com/fazurrehman/faizur-gulp-starter/blob/master/dist/img/faizur-gulp-starter.png "faizur-gulp-starter"
 
 # Faizur Gulp Starter
 
