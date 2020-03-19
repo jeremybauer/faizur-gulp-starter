@@ -1,4 +1,3 @@
-
 ![Faizur Gulp Starter](/../master/dist/img/faizur-gulp-starter.png?raw=true "Faizur Gulp Starter")
 
 # Faizur Gulp Starter
@@ -59,6 +58,7 @@ Coming Soon
 ---
 
 Want to contribute? Great! Email Me [me@faizur.com](mailto:me@faizur.com)
+
 **Free Software, Hell Yeah!**
 
 Wanna know more [Faizur Rehman](https://faizur.com/)
