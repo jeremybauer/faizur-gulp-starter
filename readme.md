@@ -8,15 +8,15 @@ This is my one of best frontend project structure, designed for personal & clien
 
 | Plugin      | Readmore                                                                                    |
 | ----------- | ------------------------------------------------------------------------------------------- |
-| **Gulp**    | gulpjs.com                                                                                  |
-| **SASS**    | sass-lang.com                                                                               |
-| **Twig**    | sass-lang.com                                                                               |
-| **PostCSS** | npmjs.com/package/gulp-twig                                                                 |
+| **Gulp**    | [gulpjs.com](https://gulpjs.com)                                                            |
+| **SASS**    | [sass-lang.com](https://sass-lang.com/)                                                     |
+| **Twig**    | [npmjs.com/package/gulp-twig](npmjs.com/package/gulp-twig)                                  |
+| **PostCSS** | [https://postcss.org/](https://postcss.org/), [https://cssnano.co/](https://cssnano.co/)    |
 | See More    | [package.json](https://github.com/fazurrehman/faizur-gulp-starter/blob/master/package.json) |
 
 ## Framework & libraries
 
-- Bootstrap sass
+- [Bootstrap sass](https://www.npmjs.com/package/bootstrap)
 - Jquery
 
 ### Installation
